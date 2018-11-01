@@ -3,6 +3,8 @@ import * as BooksAPI from './BooksAPI'
 import './App.css'
 import BookShelf from './BookShelf'
 import SearchPage from './SearchPage'
+
+
 class BooksApp extends React.Component {
   state = {
     /**
@@ -24,6 +26,14 @@ class BooksApp extends React.Component {
       })
   }
 
+  findBook = (book) => {
+    BooksAPI.search(book)
+      .then((book) => {
+        this.setState((currentState) => ({
+          books: currentState.books.concat([book])
+        }))
+      })
+  }
 
   render() {
     return (
