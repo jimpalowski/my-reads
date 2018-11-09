@@ -4,16 +4,10 @@ import { PropTypes } from 'prop-types';
 class Books extends React.Component {
     static propTypes = {
         books: PropTypes.array.isRequired
-    }  
+    }
+
     render() {
-
-      const { books } = this.props
-
-    const showingBooks = search === ''
-        ? books
-        : books.filter((b) => (
-            b.
-        )    
+  
         return (
 
             <div className="bookshelf-books">
@@ -23,7 +17,7 @@ class Books extends React.Component {
                   <div className="book-top">
                     <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: 'url("http://books.google.com/books/content?id=PGR2AwAAQBAJ&printsec=frontcover&img=1&zoom=1&imgtk=AFLRE73-GnPVEyb7MOCxDzOYF1PTQRuf6nCss9LMNOSWBpxBrz8Pm2_mFtWMMg_Y1dx92HT7cUoQBeSWjs3oEztBVhUeDFQX6-tWlWz1-feexS0mlJPjotcwFqAg6hBYDXuK_bkyHD-y&source=gbs_api")' }}></div>
                     <div className="book-shelf-changer">
-                      <select>
+                      <select onChange={this.handleChange} onClick="console.log('I was clicked'); return false">
                         <option value="move" disabled>Move to...</option>
                         <option value="currentlyReading">Currently Reading</option>
                         <option value="wantToRead">Want to Read</option>
