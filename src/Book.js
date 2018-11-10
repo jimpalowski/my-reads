@@ -1,10 +1,11 @@
-import React from 'react'
+import React, {Component} from 'react'
 
 class Book extends React.Component {
+
     render() {
         return (
             <div>
-                Testing
+               <p>Author: {this.state.title}</p> 
             </div>
         )
     }

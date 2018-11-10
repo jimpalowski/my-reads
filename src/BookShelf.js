@@ -1,7 +1,11 @@
 import React from 'react';
 import Books from './Books'
+import books from './App'
 
 class BookShelf extends React.Component {
+  state = {
+    books:[]
+  }
     render() {
         return (
             <div>
@@ -12,8 +16,11 @@ class BookShelf extends React.Component {
               <div>
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Currently Reading</h2>
-                    <Books></Books>
+                    <Books passedBooks={this.state.books} />
                 </div>
+
+
+
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
