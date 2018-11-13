@@ -1,11 +1,7 @@
 import React from 'react'
-import { PropTypes } from 'prop-types';
 
 class Books extends React.Component {
-    //  static propTypes = {
-    //     books: PropTypes.array.isRequired
-    // }
-
+ 
     render() {
         return (
             <div className="bookshelf-books">

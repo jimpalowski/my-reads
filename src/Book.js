@@ -1,11 +1,12 @@
-import React, {Component} from 'react'
+import React, { Component } from 'react'
 
 class Book extends React.Component {
 
     render() {
         return (
             <div>
-               <p>Author: {this.state.title}</p> 
+                <p>Title: {this.props.title}</p>
+               <p>Author: {this.state.author}</p> 
             </div>
         )
     }

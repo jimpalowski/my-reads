@@ -18,9 +18,6 @@ class BookShelf extends React.Component {
                   <h2 className="bookshelf-title">Currently Reading</h2>
                     <Books passedBooks={this.state.books} />
                 </div>
-
-
-
                 <div className="bookshelf">
                   <h2 className="bookshelf-title">Want to Read</h2>
                   <div className="bookshelf-books">
