@@ -8,7 +8,7 @@ import SearchPage from './SearchPage'
 class BooksApp extends React.Component {
   state = {
     showSearchPage: false,
-    books: []
+    books: [],
   }
 
   componentDidMount() {
@@ -19,8 +19,8 @@ class BooksApp extends React.Component {
     BooksAPI.getAll()
       .then((books) => {
         this.setState(() =>
-          books)
-          console.log(books)
+          books
+          )
       })
     }
   
@@ -33,9 +33,9 @@ class BooksApp extends React.Component {
       })
   }
 
-    handleEventChange = (event) => {
+  handleEventChange = (event) => {
 
-    }
+  }
 
   render() {
     return (
@@ -44,7 +44,7 @@ class BooksApp extends React.Component {
           <SearchPage></SearchPage>
         ) : (
           <div className="list-books">
-            <BookShelf></BookShelf>
+            <BookShelf passedBooks={this.getBooks()}></BookShelf>
            <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
             </div>
