@@ -8,7 +8,11 @@ import SearchPage from './SearchPage'
 class BooksApp extends React.Component {
   state = {
     showSearchPage: false,
-    books: [],
+    books: [{
+      title: '',
+      author: '',
+
+    }],
   }
 
   componentDidMount() {
@@ -46,7 +50,9 @@ class BooksApp extends React.Component {
         ) : (
           <div className="list-books">
             <BookShelf 
-                  passedBooks={this.props.getBooks}
+                passedBooks={this.props.getBooks}
+                key={this.books}
+                title={this.title}
             />
 
            <div className="open-search">
