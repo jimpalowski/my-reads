@@ -21,7 +21,9 @@ class BooksApp extends React.Component {
         this.setState(() =>
           books
           )
+          console.log(books)
       })
+      
     }
   
   findBook = (book) => {
@@ -32,8 +34,7 @@ class BooksApp extends React.Component {
         }))
       })
   }
-
-  handleEventChange = (event) => {
+  handleEventChange = (e) => {
 
   }
 
@@ -44,7 +45,10 @@ class BooksApp extends React.Component {
           <SearchPage></SearchPage>
         ) : (
           <div className="list-books">
-            <BookShelf passedBooks={this.getBooks()}></BookShelf>
+            <BookShelf 
+                  passedBooks={this.props.getBooks}
+            />
+
            <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
             </div>

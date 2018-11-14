@@ -6,14 +6,14 @@ class Books extends React.Component {
     render() {
         return (
             <div className="bookshelf-books">
-            <ol className="books-grid">
-              <li>
-                <Book bookPassed={this.props.passingBooks} />
-              </li>
-            </ol>
+              <ol className="books-grid">
+                <li>
+                  <Book bookPassed={this.props.passingBooks} />
+                </li>
+              </ol>
           </div>
         )
     }
 }
-console.log("The books are " + Book)
+console.log("The books are ")
 export default Books
