@@ -6,6 +6,11 @@ import SearchPage from './SearchPage'
 
 
 class BooksApp extends React.Component {
+  constructor(props) {
+    super(props);
+    this.getBooks = this.getBooks.bind(this);
+    this.findBooks = this.findBooks.bind(this)
+  }
   state = {
     showSearchPage: false,
     books: [{
@@ -30,7 +35,7 @@ class BooksApp extends React.Component {
       
     }
   
-  findBook = (book) => {
+  findBooks = (book) => {
     BooksAPI.search(book)
       .then((book) => {
         this.setState((currentState) => ({
@@ -46,7 +51,8 @@ class BooksApp extends React.Component {
     return (
       <div className="app">
         {this.state.showSearchPage ? (
-          <SearchPage></SearchPage>
+          <SearchPage
+            searchBooks={this.findBooks}></SearchPage>
         ) : (
           <div className="list-books">
             <BookShelf 
@@ -54,7 +60,6 @@ class BooksApp extends React.Component {
                 key={this.books}
                 title={this.title}
             />
-
            <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
             </div>
