@@ -7,16 +7,18 @@ class Book extends React.Component {
         this.state = {
             value : ''
         };
-    
+        
         this.handleChange = this.handleChange.bind(this);
     }  
 
     handleChange(event) {
+        event.preventDefault();
         this.setState({ 
             value: event.target.value 
         })
         console.log(this.state.value)
     }
+    
     render() {
 
         return (
@@ -39,5 +41,6 @@ class Book extends React.Component {
         )
     }
 }
+
 
 export default Book
