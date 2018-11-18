@@ -18,9 +18,7 @@ class Book extends React.Component {
         })
         console.log(this.state.value)
     }
-    
     render() {
-
         return (
             <div className="book">
                 <div className="book-top">
@@ -41,6 +39,5 @@ class Book extends React.Component {
         )
     }
 }
-
 
 export default Book
