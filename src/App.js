@@ -6,43 +6,36 @@ import SearchPage from './SearchPage'
 
 
 class BooksApp extends React.Component {
-  constructor(props) {
+  constructor(props){
     super(props);
-    this.getBooks = this.getBooks.bind(this);
-    this.findBooks = this.findBooks.bind(this)
-  }
-  state = {
-    showSearchPage: false,
-    books: [{
-      title: '',
-      author: '',
-
-    }],
+    this.state = {
+      showSearchPage: false,
+      books:[],
+    }
+}
+  componentWillMount(){
+    this.getBooks()
   }
 
-  componentDidMount() {
-    this.getBooks();
-  }
-
-  getBooks() {
+  getBooks = () => {
     BooksAPI.getAll()
       .then((books) => {
-        this.setState(() =>
+        this.setState(() =>({
           books
-          )
+        }))
           console.log(books)
       })
       
-    }
-  
-  findBooks = (book) => {
-    BooksAPI.search(book)
-      .then((book) => {
-        this.setState((currentState) => ({
-          books: currentState.books.concat([book])
-        }))
-      })
   }
+  
+  // findBooks = (book) => {
+  //   BooksAPI.search(book)
+  //     .then((book) => {
+  //       this.setState((currentState) => ({
+  //         books: currentState.books.concat([book])
+  //       }))
+  //     })
+  // }
   handleEventChange = (e) => {
 
   }
@@ -56,8 +49,7 @@ class BooksApp extends React.Component {
         ) : (
           <div className="list-books">
             <BookShelf 
-                passedBooks={this.props.getBooks}
-                key={this.books}
+                books={this.state.books}
                 title={this.title}
             />
            <div className="open-search">

@@ -1,5 +1,6 @@
 import React from 'react'
 
+
 class Book extends React.Component {
     constructor(props) {
         super(props);
@@ -7,7 +8,6 @@ class Book extends React.Component {
         this.state = {
             value : ''
         };
-        
         this.handleChange = this.handleChange.bind(this);
     }  
 
