@@ -3,7 +3,7 @@ import Books from './Books'
 
 class BookShelf extends React.Component {
     render() {
-      console.log('THE PROPS IN BOOKSHELF: ', this.props)
+      //console.log('THE PROPS IN BOOKSHELF: ', this.props)
         return (
             <div>
               {/* condtional */}
@@ -14,7 +14,7 @@ class BookShelf extends React.Component {
               <div>
                 <div className="bookshelfCurrent">
                   <h2 className="bookshelf-title">Currently Reading</h2>
-                    <Books passingBooks={this.props.passedBooks} />
+                    <Books booksPassed={this.props.books} />
                 </div>
                 <div className="bookshelfWant">
                   <h2 className="bookshelf-title">Want to Read</h2>
