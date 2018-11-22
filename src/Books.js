@@ -61,6 +61,5 @@ class Books extends React.Component {
             </div>
         )
     }
-    
 }
 export default Books

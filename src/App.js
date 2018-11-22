@@ -27,14 +27,7 @@ class BooksApp extends React.Component {
       
   }
   
-  // findBooks = (book) => {
-  //   BooksAPI.search(book)
-  //     .then((book) => {
-  //       this.setState((currentState) => ({
-  //         books: currentState.books.concat([book])
-  //       }))
-  //     })
-  // }
+
   handleEventChange = (e) => {
 
   }

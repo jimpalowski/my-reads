@@ -1,6 +1,15 @@
 import React from 'react';
 
 class SearchPage extends React.Component {
+    findBooks = (book) => {
+    BooksAPI.search(book)
+      .then((book) => {
+        this.setState((currentState) => ({
+          books: currentState.books.concat([book])
+        }))
+      })
+  }
+}
     render() {
         return (
             <div className="search-books">
