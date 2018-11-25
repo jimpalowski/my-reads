@@ -1,6 +1,7 @@
 import React from 'react';
 
 class SearchPage extends React.Component {
+
     findBooks = (book) => {
     BooksAPI.search(book)
       .then((book) => {
@@ -9,7 +10,7 @@ class SearchPage extends React.Component {
         }))
       })
   }
-}
+
     render() {
         return (
             <div className="search-books">
@@ -33,6 +34,5 @@ class SearchPage extends React.Component {
           </div>
         )
     }
-}
-
+  }
 export default SearchPage
