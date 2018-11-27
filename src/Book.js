@@ -11,7 +11,6 @@ class Book extends React.Component {
     }  
 
     handleChange(event) {
-        event.preventDefault();
         this.setState({ 
             value: event.target.value 
         })
