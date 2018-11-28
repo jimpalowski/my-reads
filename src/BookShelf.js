@@ -2,10 +2,12 @@ import React from 'react';
 import Books from './Books'
 
 class BookShelf extends React.Component {
+  
     render() {
+      const myBooks = this.props
         return (
             <div>
-              {/* condtional */}
+              {this.myBooks}
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
