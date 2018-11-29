@@ -4,10 +4,9 @@ import Books from './Books'
 class BookShelf extends React.Component {
   
     render() {
-      const myBooks = this.props
+      console.log("The current status of this book is:"+ this.props)
         return (
             <div>
-              {this.myBooks}
             <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
@@ -19,11 +18,11 @@ class BookShelf extends React.Component {
                 </div>
                 <div className="bookshelfWant">
                   <h2 className="bookshelf-title">Want to Read</h2>
-                    <Books />
+                    <Books booksPassed={this.props.books}/>
                 </div>
                 <div className="bookshelfRead">
                   <h2 className="bookshelf-title">Read</h2>
-                  <Books />
+                  <Books booksPassed={this.props.books}/>
                 </div>
               </div>
             </div>
