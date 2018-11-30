@@ -18,11 +18,11 @@ class BookShelf extends React.Component {
                 </div>
                 <div className="bookshelfWant">
                   <h2 className="bookshelf-title">Want to Read</h2>
-                    <Books booksPassed={this.props.books}/>
+                    <Books/>
                 </div>
                 <div className="bookshelfRead">
                   <h2 className="bookshelf-title">Read</h2>
-                  <Books booksPassed={this.props.books}/>
+                  <Books/>
                 </div>
               </div>
             </div>
