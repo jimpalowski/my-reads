@@ -25,7 +25,7 @@ class BooksApp extends React.Component {
       )}.then(data => {
         let bookNames = data.results.map((books) => {
           return(
-            <div key={books.author}>
+            <div key={books.results}>
               <img src={books.image} />
               </div>
           )
