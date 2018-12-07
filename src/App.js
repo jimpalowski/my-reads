@@ -19,7 +19,7 @@ class BooksApp extends React.Component {
   }
 
   componentDidMount(){
-      .then(results => {
+      getBooks().then(books => {
           return results.json();
       )}
         .then(data => {
