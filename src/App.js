@@ -16,24 +16,24 @@ class BooksApp extends React.Component {
   componentWillMount(){
     this.getBooks()
     }
-  }
+  
 
-  componentDidMount(){
-      getBooks().then(books => {
-          return results.json();
-      )}
-        .then(data => {
-          let bookNames = data.results.map((books) => {
-            return(
-              <div key={bookNames.author}>
-                <img src={bookNames.image} />
-                </div>
-            )
-        })
-        this.setState({books: books})
-        console.log("state", books)
-      })
-    )}
+  // componentDidMount(){
+  //     getBooks().then(books => {
+  //         return results.json();
+  //     )}
+  //       .then(data => {
+  //         let bookNames = data.results.map((books) => {
+  //           return(
+  //             <div key={bookNames.author}>
+  //               <img src={bookNames.image} />
+  //               </div>
+  //           )
+  //       })
+  //       this.setState({books: books})
+  //       console.log("state", books)
+  //     })
+  //   )}
   
   getBooks = () => {
     BooksAPI.getAll()
@@ -44,17 +44,15 @@ class BooksApp extends React.Component {
       })
       
   }
-  
+
   updateBookShelf = (book, updatedShelf) => {
     const { books } = this.state;
 
     const bookIndex = books.findIndex((key) => {
       return key.id === book.id;
     });
-
-  handleEventChange = (e) => {
-
   }
+
 
   render() {
     return (
@@ -76,5 +74,5 @@ class BooksApp extends React.Component {
       </div>
     )
   }
-}
+  }
 export default BooksApp
