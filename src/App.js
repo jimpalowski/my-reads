@@ -45,6 +45,12 @@ class BooksApp extends React.Component {
       
   }
   
+  updateBookShelf = (book, updatedShelf) => {
+    const { books } = this.state;
+
+    const bookIndex = books.findIndex((key) => {
+      return key.id === book.id;
+    });
 
   handleEventChange = (e) => {
 
@@ -60,6 +66,7 @@ class BooksApp extends React.Component {
           <div className="list-books">
             <BookShelf 
                 books={this.state.books}
+                updateBookShelf={ this.updateBookShelf }
             />
            <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
