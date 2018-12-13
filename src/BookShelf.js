@@ -3,7 +3,13 @@ import Books from './Books'
 
 class BookShelf extends React.Component {
   
+  filterBooks = (shelf) => {
+    const { books } = this.props;
+    return books.filter((book) => book.shelf === shelf);
+  }
     render() {
+
+
       console.log("The current status if t:"+ this.props.shelf)
         return (
             <div>
@@ -13,8 +19,10 @@ class BookShelf extends React.Component {
             <div className="list-books-content">
               <div>
                 <div className="bookshelfCurrent">
-                  <h2 className="bookshelf-title">Currently Reading</h2>
-                    <Books booksPassed={this.props.books} />
+                  <h2 className="bookshelf-title">{  }</h2>
+                    <Books 
+                      books={this.filterBooks}
+                       />
                 </div>
                 <div className="bookshelfWant">
                   <h2 className="bookshelf-title">Want to Read</h2>
@@ -32,3 +40,4 @@ class BookShelf extends React.Component {
 }
 
 export default BookShelf
+

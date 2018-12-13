@@ -28,7 +28,7 @@ class Book extends React.Component {
     }
 
     render() {
-        const { title, author, imageLinks } = this.props;
+        const { title, authors, imageLinks } = this.props;
         const { thumbnail } = imageLinks;
         const { shelf } = this.state;
         return (
