@@ -3,6 +3,14 @@ import BooksAPI from './App'
 
 class SearchPage extends React.Component {
 
+  constructor () {
+    super();
+    this.state = {
+        query: '',
+        books: []
+    };
+}
+
     findBooks = (book) => {
     BooksAPI.search(book)
       .then((book) => {
@@ -11,6 +19,7 @@ class SearchPage extends React.Component {
         }))
       })
   }
+  
     render() {
         return (
             <div className="search-books">
