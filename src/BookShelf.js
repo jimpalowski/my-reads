@@ -21,7 +21,8 @@ class BookShelf extends React.Component {
                 <div className="bookshelfCurrent">
                   <h2 className="bookshelf-title">{  }</h2>
                     <Books 
-                      books={this.filterBooks}
+                      books={this.state.filterBooks}
+                      filteringBooks={this.filterBooks}
                        />
                 </div>
                 <div className="bookshelfWant">
