@@ -6,11 +6,10 @@ class BookShelf extends React.Component {
   filterBooks = (shelf) => {
     const { books } = this.props;
     return books.filter((book) => book.shelf === shelf);
-  }
+    }
     render() {
 
-
-      console.log("The current status if t:"+ this.props.shelf)
+      console.log("The current status if t:"+ this.filterBooks)
         return (
             <div>
             <div className="list-books-title">
