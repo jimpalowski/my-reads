@@ -20,15 +20,16 @@ class SearchPage extends React.Component {
       })
   }
   updateQuery = (query) => {
-    const { searchBooks} = this.props;
+    const { searchBook} = this.props;
 
     this.setState({ query: query });
     const trimBook = query.trim();
     if (trimBook === '') {
         return;
     }
-  
+  }
     render() {
+    const updateBookshelf = this.props;
         return (
             <div className="search-books">
             <div className="search-books-bar">
