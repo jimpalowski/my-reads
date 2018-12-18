@@ -18,9 +18,10 @@ class Books extends React.Component {
                         authors={ books.authors }
                         title={ books.title }
                         imageLinks={ books.imageLinks }
-                        shelf={ books.shelf }
+                        // shelf={ books.shelf }
                         bookPassed={this.props}
-                        updateShelf={ updateShelf } />
+                        // updateShelf={ updateShelf } 
+                        />
                   </li>
                   ))
                 }

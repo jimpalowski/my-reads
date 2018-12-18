@@ -20,7 +20,7 @@ class SearchPage extends React.Component {
       })
   }
   updateQuery = (query) => {
-    const { searchBook} = this.props;
+    const { searchBook } = this.props;
 
     this.setState({ query: query });
     const trimBook = query.trim();

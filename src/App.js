@@ -52,7 +52,10 @@ class BooksApp extends React.Component {
       return key.id === book.id;
     });
   }
-
+  filterBooks = (books) => {
+    return books.filter((book) => 
+      book.shelf === books);
+    }
 
   render() {
     return (
@@ -65,6 +68,7 @@ class BooksApp extends React.Component {
             <BookShelf 
                 books={this.state.books}
                 updateBookShelf={ this.updateBookShelf }
+                filterBooks={this.filterBooks}
             />
            <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
