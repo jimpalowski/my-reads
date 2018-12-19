@@ -17,14 +17,16 @@ class Book extends React.Component {
     }
 
     shelfChange (value) {
-        const {updateShelf} = this.props;
-        updateShelf(this.props, value)
-        this.setState({ shelf: value });
+        const updateShelf  = this.props;
+            updateShelf(this.props, value)
+                this.setState({ 
+                    shelf: value 
+                });
     }
 
     componentDidMount () {
         const { shelf } = this.props
-        this.setState({ shelf});
+        this.setState({ shelf });
     }
 
     render() {

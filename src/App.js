@@ -45,19 +45,20 @@ class BooksApp extends React.Component {
       
   }
 
-  updateBookShelf = (book, updatedShelf) => {
-    const { books } = this.state;
+  // updateBookShelf = (book, updatedShelf) => {
+  //   const { books } = this.state;
 
-    const bookIndex = books.findIndex((key) => {
-      return key.id === book.id;
-    });
-  }
-  filterBooks = (books) => {
-    return books.filter((book) => 
-      book.shelf === books);
-    }
+  //   const bookIndex = books.findIndex((key) => {
+  //     return key.id === book.id;
+  //   });
+  // }
+  // filterBooks = (books) => {
+  //   return books.filter((book) => 
+  //     book.shelf === books);
+  //   }
 
   render() {
+
     return (
       <div className="app">
         {this.state.showSearchPage ? (
@@ -66,9 +67,9 @@ class BooksApp extends React.Component {
         ) : (
           <div className="list-books">
             <BookShelf 
-                books={this.state.books}
-                updateBookShelf={ this.updateBookShelf }
-                filterBooks={this.filterBooks}
+                passBooks={ this.state }
+                // updateBookShelf={ this.updateBookShelf }
+                // filterBooks={ this.filterBooks }
             />
            <div className="open-search">
               <a onClick={() => this.setState({ showSearchPage: true })}>Add a book</a>
