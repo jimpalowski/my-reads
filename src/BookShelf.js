@@ -5,9 +5,10 @@ class BookShelf extends React.Component {
   
 
     render() {
-      console.log("The current status is:"+ this.props)
-
+      
+      console.log("The current status of this book is:"+ this.props)
         return (
+          
             <div>
             <div className="list-books-title">
               <h1>MyReads</h1>
@@ -15,7 +16,7 @@ class BookShelf extends React.Component {
             <div className="list-books-content">
               <div>
                 <div className="bookshelfCurrent">
-                  <h2 className="bookshelf-title">{  }</h2>
+                  <h2 className="bookshelf-title">Currently Reading</h2>
                     <Books 
                       booksPassed={this.books}
                       filteringBooks={this.filterBooks}

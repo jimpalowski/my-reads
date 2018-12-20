@@ -67,7 +67,7 @@ class BooksApp extends React.Component {
         ) : (
           <div className="list-books">
             <BookShelf 
-                passBooks={ this.state }
+                books={ this.state.books }
                 // updateBookShelf={ this.updateBookShelf }
                 // filterBooks={ this.filterBooks }
             />
@@ -78,6 +78,9 @@ class BooksApp extends React.Component {
         )}
       </div>
     )
+    
   }
+  
   }
+  console.log(this.props)
 export default BooksApp
