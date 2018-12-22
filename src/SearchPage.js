@@ -29,7 +29,9 @@ class SearchPage extends React.Component {
     }
   }
     render() {
-    const updateBookshelf = this.props;
+      const { books } = this.state;
+      const { updateBookShelf } = this.props;
+
         return (
             <div className="search-books">
             <div className="search-books-bar">
