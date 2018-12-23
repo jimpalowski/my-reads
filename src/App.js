@@ -17,23 +17,6 @@ class BooksApp extends React.Component {
     this.getBooks()
     }
   
-
-  // componentDidMount(){
-  //     getBooks().then(books => {
-  //         return results.json();
-  //     )}
-  //       .then(data => {
-  //         let bookNames = data.results.map((books) => {
-  //           return(
-  //             <div key={bookNames.author}>
-  //               <img src={bookNames.image} />
-  //               </div>
-  //           )
-  //       })
-  //       this.setState({books: books})
-  //       console.log("state", books)
-  //     })
-  //   )}
   
   getBooks = () => {
     BooksAPI.getAll()
