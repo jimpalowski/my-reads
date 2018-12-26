@@ -1,5 +1,6 @@
 import React from 'react';
 import BooksAPI from './App'
+import Book from './book';
 
 class SearchPage extends React.Component {
 
