@@ -46,7 +46,6 @@ class SearchPage extends React.Component {
                     placeholder="Search by title or author"
                     onChange={ (event) => this.updateQuery(event.target.value) }
                 />
-
               </div>
             </div>
             <div className="search-books-results">
