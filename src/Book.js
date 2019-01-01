@@ -25,8 +25,10 @@ class Book extends React.Component {
     }
 
     componentDidMount () {
-        const { shelf } = this.props
-        this.setState({ shelf });
+        const shelf = this.props
+        this.setState({ 
+            shelf 
+        });
     }
 
     render() {
