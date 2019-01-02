@@ -20,7 +20,7 @@ class BookShelf extends React.Component {
                     <Books 
                       booksPassed={this.books}
                       filteringBooks={this.filterBooks}
-                       updateShelf = { updateShelf }
+                       updateShelf = { this.updateShelf }
                        />
                 </div>
                 <div className="bookshelfWant">
