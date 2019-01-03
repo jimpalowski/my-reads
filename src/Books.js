@@ -8,7 +8,7 @@ class Books extends React.Component {
           <div className="bookshelf-allbooks">
             <div className="bookshelf-books-current">
               <ol className="books-grid">
-{/*               
+{               
                 {
                   books.sort((a, b) => {
                     return a.title > b.title;
@@ -19,13 +19,13 @@ class Books extends React.Component {
                         authors={ books.authors }
                         title={ books.title }
                         imageLinks={ books.imageLinks }
-                        // shelf={ books.shelf }
+                        shelf={ books.shelf }
                         bookPassed={this.props}
-                        // updateShelf={ updateShelf } 
+                        updateShelf={ updateShelf } 
                         />
                   </li>
                   ))
-                } */}
+                } }
 
               </ol>
           </div>

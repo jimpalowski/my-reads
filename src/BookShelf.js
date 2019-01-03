@@ -3,7 +3,6 @@ import Books from './Books'
 
 class BookShelf extends React.Component {
   
-
     render() {
       
       console.log("The current status of this book is:"+ this.props)
