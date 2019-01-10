@@ -12,7 +12,7 @@ class SearchPage extends React.Component {
     };
 }
 
-    findBooks = (book) => {
+  findBooks = (book) => {
     BooksAPI.search(book)
       .then((book) => {
         this.setState((currentState) => ({
