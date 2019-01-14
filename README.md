@@ -15,10 +15,6 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 * [npm](https://www.npmjs.com/)
 
-If you have Node installed, you have NPM, if not install node:
-
-* [Node](https://nodejs.org/en/)
-
 ### Installing
 Run:
 ```
