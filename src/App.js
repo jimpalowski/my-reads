@@ -28,6 +28,7 @@ class BooksApp extends React.Component {
       
   }
 
+
   updateBookShelf = (book, updatedShelf) => {
     const { books } = this.state;
 
@@ -51,7 +52,7 @@ class BooksApp extends React.Component {
           <div className="list-books">
             <BookShelf 
                 books={ this.state.books }
-                updateBookShelf={ updateBookShelf }
+                updateBookShelf={ this.updateBookShelf }
                 // filterBooks={ this.filterBooks }
             />
            <div className="open-search">

@@ -9,7 +9,7 @@ class BookShelf extends React.Component {
         return (
           
             <div>
-            <div className="list-books-title">{ name }
+            <div className="list-books-title">
               <h1>MyReads</h1>
             </div>
             <div className="list-books-content">
