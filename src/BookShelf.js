@@ -4,8 +4,8 @@ import Books from './Books'
 class BookShelf extends React.Component {
   
     render() {
+      console.log("The current status of this book is:"+ this.filteredBooks)
       
-      console.log("The current status of this book is:"+ this.props)
         return (
           
             <div>
@@ -19,7 +19,8 @@ class BookShelf extends React.Component {
                     <Books 
                       booksPassed={this.books}
                       filteringBooks={this.filterBooks}
-                       updateShelf = { this.updateShelf }
+                      updateShelf = { this.updateShelf }
+                      sortingBook = {this.sortingBooks}
                        />
                 </div>
                 <div className="bookshelfWant">
