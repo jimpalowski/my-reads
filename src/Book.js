@@ -4,8 +4,12 @@ class Book extends React.Component {
     constructor(props) {
         super(props);
 
+        const { title, authors, imageLinks } = this.props;
+            const { thumbnail } = imageLinks;
+            const { shelf } = this.state;
         this.state = {
             shelf : 'none'
+            
         };
     }  
 
@@ -32,9 +36,7 @@ class Book extends React.Component {
     }
 
     render() {
-        const { title, authors, imageLinks } = this.props;
-        const { thumbnail } = imageLinks;
-        const { shelf } = this.state;
+
         return (
             <div className="book">
                 <div className="book-top">
