@@ -40,11 +40,11 @@ class Book extends React.Component {
         return (
             <div className="book">
                 <div className="book-top">
-                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${ thumbnail }")` }}></div>
+                    <div className="book-cover" style={{ width: 128, height: 193, backgroundImage: `url("${ this.thumbnail }")` }}></div>
                         <div className="book-shelf-changer">
                             <select 
                                 onChange={this.handleChange} 
-                                value={ shelf }
+                                value={ this.shelf }
                             >
                                 <option value="move" disabled>Move to...</option>
                                 <option value="currentlyReading">Currently Reading</option>
@@ -54,8 +54,8 @@ class Book extends React.Component {
                             </select>
                         </div>
                 </div>
-                <div className="book-title" >{ title }</div>
-                <div className="book-authors">{ authors }</div>
+                <div className="book-title" >{ this.title }</div>
+                <div className="book-authors">{ this.authors }</div>
             </div>
         )
     }
