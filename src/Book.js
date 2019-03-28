@@ -6,6 +6,7 @@ class Book extends React.Component {
 
         const { title, authors, imageLinks } = this.props;
             const { thumbnail } = imageLinks;
+            //
             const { shelf } = this.state;
         this.state = {
             shelf : 'none'
